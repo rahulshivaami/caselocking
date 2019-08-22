@@ -32,34 +32,25 @@ if (isset($_POST['submit'])) {
     if (isset($query)) {
         
 
-        $tmp_sub = "Enquiry from SA PPC landing page - Header Form";
+        $tmp_sub = "New Case Created - ". $domain;
         $submsg = '';
         $data = $_POST;
 
-        $message = "<p style='font-size: 16px; font-family:Verdana; font-weight: 500; margin: 0; padding: 7px; text-transform: uppercase;  background: #f0f0f0 none repeat scroll 0 0;
-     margin-top: 10px; margin-top: 20px; width:100%; padding-left: 10px; padding-right: 10px;'><b>Enquiry from SA PPC landing page - Header Form</b></p>
-     <div style='float:left; width:100%'><div style='font-size: 13px; width:100%; line-height:30px; color:#000; font-family:Verdana; padding:5 0 10px 0; margin:7px 0'><b>Name</b><br/>"
-                . "<div face='Verdana' style='font-size: 12px; width:100%; color:#000; background-color:#F9F9F9; border-bottom:2px solid #D7D7D7'>" . $contact_name . "</font></div></div>"
-                . "<div style='font-size: 13px; width:100%; line-height:30px; color:#000; font-family:Verdana; padding:5 0 10px 0; margin:7px 0'><b>Email</b><br/>"
-                . "<div face='Verdana' style='font-size: 12px; width:100%; color:#000; background-color:#F9F9F9; border-bottom:2px solid #D7D7D7'>" . $email . "</font></div></div>"
-                . "<div style='font-size: 13px; width:100%; line-height:30px; color:#000; font-family:Verdana; padding:5 0 10px 0; margin:7px 0'><b>Contact</b><br/>"
-                . "<div face='Verdana' style='font-size: 12px; width:100%; color:#000; background-color:#F9F9F9; border-bottom:2px solid #D7D7D7'>" . $contact_number . "</font></div></div>"
-                . "<div style='font-size: 13px; width:100%; line-height:30px; color:#000; font-family:Verdana; padding:5 0 10px 0; margin:7px 0'><b>Course</b><br/>"
-                . "<div face='Verdana' style='font-size: 12px; width:100%; color:#000; background-color:#F9F9F9; border-bottom:2px solid #D7D7D7'>" . $course . "</font></div></div>"
-                . "<div style='font-size: 13px; width:100%; line-height:30px; color:#000; font-family:Verdana; padding:5 0 10px 0; margin:7px 0'><b>Message</b><br/>"
-                . "<div face='Verdana' style='font-size: 12px; width:100%; color:#000; background-color:#F9F9F9; border-bottom:2px solid #D7D7D7'>" . $plan . "</font></div></div>" .
+        $message = "<p>Thank you for submitting the case. Our team will get back you shortly with the case update.</p>".
+                   "<p>Lets work as a team and grow together !!</p>".
                 "<br>";
         //$tmp_arr_to = array("rahul.b@shivaami.com  ");
         //$tmp_cc_array = array("rahul.b@shivaami.com");
-
-        $tmp_arr_to = array("rahul.b@shivaami.com");
-        $tmp_cc_array = array("rahul.vinod.bhalekar@gmail.com");
+        $user_email = $_SESSION['email'];
+        $tmp_arr_to = array($user_email);
+        $tmp_cc_array = array("rahul.vinod.bhalekar@gmail.com"); //cc email ids
         //$tmp_cc_array = array("punit@shivaami.com", "priyanka@shivaami.com", "maaz@shivaami.com", "darshan@shivaami.com", "vishwajit@shivaami.com", "haresh@shivaami.com", "pratima@shivaami.com", "madhuram@shivaami.com");
         $adminemail = 'Resellers@shivaami.com';
         $adminname = 'Shivaami Reseller';
         $tmp_arr_file = array();
 
         $tmp_str_ret = sendmsg_function($tmp_arr_to, $tmp_sub, $message, $adminemail, $adminname, $tmp_cc_array, $tmp_arr_file);
+        
     }
 
     header("Location: home.php");

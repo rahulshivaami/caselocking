@@ -38,7 +38,7 @@ require 'header.php';
 <div class="container-fluid">
     <div class="row">
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
+            <a class="active" href="home.php">Home</a>
             <div class="topnav-right">
                 <a href="logout.php">Logout</a>
             </div>

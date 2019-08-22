@@ -5,7 +5,7 @@ require 'menu.php';
 <style>
     .form-group{
         padding:10px;
-        //border:2px solid;
+        /*border:2px solid;*/
         margin:10px;
     }
     .form-group>label{
@@ -48,43 +48,43 @@ require 'menu.php';
             <div class="row">
                 <div class="col-xs-5 form-group">
                     <label>Company Name<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="company" class="form form-control">
+                    <input required type="text" name="company" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Domain<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="domain" class="form form-control">
+                    <input required type="text" name="domain" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Contact Name<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="contact_name" class="form form-control">
+                    <input required type="text" name="contact_name" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Contact Number<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="contact_number" class="form form-control">
+                    <input required type="text" name="contact_number" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Email<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="email" class="form form-control">
+                    <input required type="text" name="email" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Users<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="users" class="form form-control">
+                    <input required type="text" name="users" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Current Email Solution<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="current_email_solution" class="form form-control">
+                    <input required type="text" name="current_email_solution" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Employee Range<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="employee_range" class="form form-control">
+                    <input required type="text" name="employee_range" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Address<span class="required-mark"> * </span>:</label>
-                    <input type="text" name="address" class="form form-control">
+                    <input required type="text" name="address" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Plan<span class="required-mark"> * </span>:</label>
-                    <select name="plan" class="form form-control">
+                    <select required name="plan" class="form form-control">
                         <option>--Select Plan--</option>
                         <option>G-Suite Basic</option>
                         <option>G-Suite Business</option>
@@ -97,19 +97,19 @@ require 'menu.php';
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Authority/ Designation<span class="required-mark"> * </span>:</label>
-                    <input name="designation" type="text" class="form form-control">
+                    <input required name="designation" type="text" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Budget<span class="required-mark"> * </span>:</label>
-                    <input name="budget" type="text" class="form form-control">
+                    <input required name="budget" type="text" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Need<span class="required-mark"> * </span>:</label>
-                    <input name="need" type="text" class="form form-control">
+                    <input required name="need" type="text" class="form form-control">
                 </div>
                 <div class="col-xs-5 form-group">
                     <label>Timeline<span class="required-mark"> * </span>:</label>
-                    <select name="timeline" class="form form-control">
+                    <select required name="timeline" class="form form-control">
                         <option>--Select Timeline--</option>
                         <option>within a week</option>
                         <option>within a month</option>

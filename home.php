@@ -1,7 +1,7 @@
 <?php
 require 'menu.php';
 require 'connect.php';
-
+//print_r($_SESSION);
 (isset($_SESSION['role_id'])) ? $role_id = $_SESSION['role_id'] : $role_id = 0;
 if ($role_id == 1) {
     $filter = " ";
@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $query);
                 while ($roe = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $roe['case_id']; ?></td>
+                        <td><a href="detail.php?id=<?php echo $roe['case_id']; ?>"><?php echo $roe['case_id']; ?></a></td>
                         <td><?php echo $roe['company_name']; ?></td>
                         <td><?php echo $roe['domain']; ?></td>
                         <td><?php echo date("d-m-Y H:i:s", strtotime($roe['created_date'])); ?></td>
