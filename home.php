@@ -36,7 +36,7 @@ $result = mysqli_query($conn, $query);
 
 <div class="container" style="padding-top:100px;">
     <div class="row">
-        <center><h3>List of Case</h3></center><span style="float:left;"><input class="form-control" id="myInput" type="text" placeholder="Search.."></span><span style="float:right;"><a href="addcase.php"><i class="fa fa-plus">Add New</i></a></span>
+        <center><h3>List of Case</h3></center><span style="float:left;"><input class="form-control" id="myInput" type="text" placeholder="Search.."></span><span style="float:right;"><a href="addCase.php"><i class="fa fa-plus">Add New</i></a></span>
     </div><br>
     <div class="row">
         <table id="myTable" class="table table-bordered table-striped">
