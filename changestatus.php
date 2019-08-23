@@ -82,7 +82,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    header("Location: detail.php?id=".$case_id);
+    header("Location: detail.php?id=".$id);
 }
 
         
