@@ -6,9 +6,9 @@ require 'connect.php';
 if ($role_id == 1) {
     $filter = " ";
 } else {
-    $filter = " ";
+    $filter = " where `created_by`='".$role_id."' ";
 }
-$query = "select * from `reseller_case` order by created_date DESC";
+$query = "select * from `reseller_case` $filter order by created_date DESC";
 $result = mysqli_query($conn, $query);
 ?>
 <style>

@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "shivaami_rahul";
-$pass = "Rah@2135";
-$db = "shivaami_webhost";
+$user = "root";//shivaami_rahul
+$pass = "Admin123#";//Rah@2135
+$db = "shivaami_webhost";//shivaami_webhost
 
 $conn = new mysqli($host, $user, $pass, $db);
 
