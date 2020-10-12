@@ -23,6 +23,11 @@ if (isset($_POST['submit'])) {
     $timeline = mysqli_real_escape_string($conn, $data['timeline']);
     $user_id = $_SESSION['user_id'];
 
+    echo "INSERT INTO `reseller_case`(`company_name`, `domain`, `contact_name`, `contact_number`, `email`, `user`, `current_email_solution`, "
+            . "`employee_range`, `address`, `plan`, `designation`, `budget`, `need`, `timeline`, `created_by`) "
+            . "VALUES ('" . $company . "','" . $domain . "','" . $contact_name . "','" . $contact_number . "','" . $email . "','" . $users . "','" . $current_email_solution . "',"
+            . "'" . $employee_range . "','" . $address . "','" . $plan . "','" . $designation . "','" . $budget . "','" . $need . "','" . $timeline . "','" . $user_id . "'";
+    exit;
     $insert = "INSERT INTO `reseller_case`(`company_name`, `domain`, `contact_name`, `contact_number`, `email`, `user`, `current_email_solution`, "
             . "`employee_range`, `address`, `plan`, `designation`, `budget`, `need`, `timeline`, `created_by`) "
             . "VALUES ('" . $company . "','" . $domain . "','" . $contact_name . "','" . $contact_number . "','" . $email . "','" . $users . "','" . $current_email_solution . "',"
