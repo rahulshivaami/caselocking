@@ -4,9 +4,16 @@ require 'connect.php';
 //session_start();
 //print_r($_SESSION);exit
 $logged_in = $_SESSION['user_id'];
+$role_id = $_SESSION['role_id'];
 $id = $_GET['id'];
-$query = "select * from `reseller_case` where `case_id`='" . $id . "'";
-$result = mysqli_query($conn, $query);
+
+if($role_id==1){
+    $query = "select * from `reseller_case` where `case_id`='" . $id . "'";
+    $result = mysqli_query($conn, $query);
+}else{
+    $query = "select * from `reseller_case` where `case_id`='" . $id . "' and created_by='". $logged_in ."'";
+    $result = mysqli_query($conn, $query);
+}
 
 $row = mysqli_fetch_assoc($result);
 
@@ -79,7 +86,9 @@ $row2 = mysqli_fetch_assoc($result2);
                 <td>Added By: <?php echo $row2['name']; ?></td>
             </tr>
             <tr>
-
+                <?php
+                if($role_id==1){
+                ?>
                 <td>Status: <?php echo $row['status']; ?></td>
                 <td colspan="2"><form action="changestatus.php" method="POST">
                         <div class="col-lg-9 form-group">
@@ -99,7 +108,11 @@ $row2 = mysqli_fetch_assoc($result2);
                         <div class="col-lg-3">
                             <input style="border-radius:5px;margin-top:20px;padding:5px;" type="submit" class="btb btn-primary" name="submit">
                         </div>
-                    </form></td>
+                    </form>
+                </td>
+                <?php
+                }
+                ?>
             </tr>
         </table>
     </div>
