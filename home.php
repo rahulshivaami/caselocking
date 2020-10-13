@@ -3,10 +3,11 @@ require 'menu.php';
 require 'connect.php';
 //print_r($_SESSION);
 (isset($_SESSION['role_id'])) ? $role_id = $_SESSION['role_id'] : $role_id = 0;
+(isset($_SESSION['user_id'])) ? $user_id = $_SESSION['user_id'] : $user_id = 0;
 if ($role_id == 1) {
     $filter = " ";
 } else {
-    $filter = " where `created_by`='".$role_id."' ";
+    $filter = " where `created_by`='".$user_id."' ";
 }
 $query = "select * from `reseller_case` $filter order by created_date DESC";
 $result = mysqli_query($conn, $query);
